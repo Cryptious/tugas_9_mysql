@@ -1,0 +1,20 @@
+1. Buat database niomic kemudian buat tabel mahasiswa_niomic dengan data sebagai berikut:
+(Note: Silahkan teman-teman berkreasi untuk tipe data.)
+
+2. Ubah kolom mahasiswa_baru dengan nama = Irfan Arifin, asal =  Lampung dengan kondisi nim = '17020217'
+
+
+3. Ubah kolom nilai_uan = 5000 atas nama Husli Khairan. (Note: Gunakan perintah update ignore)
+
+
+4. Gunakan query replace untuk nilai nim = '17090141', nama =  'Lidya Fitriana', asal =  'Surabaya',  jurusan = 'Kimia' dan nilai_uan =  290.54;
+
+
+Jawab
+1. CREATE DATABASE niomic;
+  CREATE TABLE `niomic`.`mahasiswa_niomic` ( `nim` VARCHAR(8) NOT NULL ,  `nama` VARCHAR(100) NOT NULL ,  `asal` VARCHAR(20) NOT NULL ,  `jurusan` VARCHAR(100) NOT NULL ,  `nilai_uan` DECIMAL(5,2) NOT NULL ,    PRIMARY KEY  (`nim`));
+
+2.UPDATE `mahasiswa_niomic` SET `nama` = 'Irfan Arifin', `asal` = 'Lampung' WHERE `mahasiswa_niomic`.`nim` = '17020217';
+
+3. UPDATE IGNORE mahasiswa_niomic SET nilai_uan = '5000' WHERE nim = '17080225'
+4. REPLACE into mahasiswa_niomic VALUES('17090141','Lidya Fitriana','Surabaya','Kimia','290.54')
